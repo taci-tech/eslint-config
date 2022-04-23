@@ -1,5 +1,5 @@
 /**
- * Copyright 2016 Google Inc. All rights reserved.
+ * Copyright 2022 Xiamen Taci Technology Co., Ltd. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This ESLint config is based on the ESLint config from Google.
  */
 
 'use strict';
@@ -81,7 +83,6 @@ module.exports = {
     // 'class-methods-use-this': 'off',
     // 'complexity': 'off',
     // 'consistent-return': 'off'
-    // TODO(philipwalton): add an option to enforce braces with the
     // exception of simple, single-line if statements.
     'curly': ['error', 'multi-line'],
     // 'default-case': 'off',
@@ -188,7 +189,7 @@ module.exports = {
     'array-bracket-newline': 'off', // eslint:recommended
     'array-bracket-spacing': ['error', 'never'],
     'array-element-newline': 'off', // eslint:recommended
-    'block-spacing': ['error', 'never'],
+    'block-spacing': ['error', 'always'],
     'brace-style': 'error',
     'camelcase': ['error', {properties: 'never'}],
     // 'capitalized-comments': 'off',
@@ -208,17 +209,17 @@ module.exports = {
     'indent': [
       'error', 2, {
         'CallExpression': {
-          'arguments': 2,
+          'arguments': 1,
         },
         'FunctionDeclaration': {
           'body': 1,
-          'parameters': 2,
+          'parameters': 1,
         },
         'FunctionExpression': {
           'body': 1,
-          'parameters': 2,
+          'parameters': 1,
         },
-        'MemberExpression': 2,
+        'MemberExpression': 1,
         'ObjectExpression': 1,
         'SwitchCase': 1,
         'ignoredNodes': [
@@ -234,7 +235,7 @@ module.exports = {
     // 'lines-around-comment': 'off',
     // 'max-depth': 'off',
     'max-len': ['error', {
-      code: 80,
+      code: 100,
       tabWidth: 2,
       ignoreUrls: true,
       ignorePattern: 'goog\.(module|require)',
@@ -244,7 +245,6 @@ module.exports = {
     // 'max-params': 'off',
     // 'max-statements': 'off',
     // 'max-statements-per-line': 'off',
-    // TODO(philipwalton): add a rule to enforce the operator appearing
     // at the end of the line.
     // 'multiline-ternary': 'off',
     'new-cap': 'error',
@@ -317,7 +317,6 @@ module.exports = {
     // http://eslint.org/docs/rules/#ecmascript-6
     // ------------------------------------------
     // 'arrow-body-style': 'off',
-    // TODO(philipwalton): technically arrow parens are optional but
     // recommended. ESLint doesn't support a *consistent* setting so
     // "always" is used.
     'arrow-parens': ['error', 'always'],
