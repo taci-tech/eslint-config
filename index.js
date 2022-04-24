@@ -272,7 +272,7 @@ module.exports = {
     // 'no-whitespace-before-property': 'off',
     // 'nonblock-statement-body-position': 'off',
     // 'object-curly-newline': 'off',
-    'object-curly-spacing': 'error',
+    'object-curly-spacing': ['error', 'always'],
     // 'object-property-newline': 'off',
     'one-var': ['error', {
       var: 'never',
@@ -288,7 +288,7 @@ module.exports = {
     'quotes': ['error', 'single', {allowTemplateLiterals: true}],
     'require-jsdoc': ['error', {
       require: {
-        FunctionDeclaration: true,
+        FunctionDeclaration: false,
         MethodDefinition: true,
         ClassDeclaration: true,
       },
